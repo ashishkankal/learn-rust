@@ -1,33 +1,31 @@
-use rand::Rng;
-use std::cmp::Ordering;
-use std::io;
-
 fn main() {
-    println!("Guess the number!");
+    tuple_example();
+    another_function(5);
+    let x = five();
 
-    let secret_number = rand::thread_rng().gen_range(1, 101);
+    println!("The return value of function five in x is: {}", x);
 
-    loop {
-        println!("Please input your guess.");
+    conditional_example(x);
+}
 
-        let mut guess = String::new();
+fn tuple_example() {
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+    let (x, y, z) = tup;
+    println!("The value of y is: {}", y);
+}
 
-        io::stdin()
-            .read_line(&mut guess)
-            .expect("Failed to read line");
+fn another_function(x: i32) {
+    println!("The value of x is: {}", x);
+}
 
-        let guess: u32 = match guess.trim().parse() {
-            Ok(num) => num,
-            Err(_) => continue,
-        };
+fn five() -> i32 {
+    5
+}
 
-        match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too small!"),
-            Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => {
-                println!("You win!");
-                break;
-            }
-        }
+fn conditional_example(number: i32) {
+    if number < 5 {
+        println!("condition was true");
+    } else {
+        println!("condition was false");
     }
 }
