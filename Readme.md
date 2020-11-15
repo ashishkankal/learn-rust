@@ -21,3 +21,5 @@
 `cargo build --release`
 
 ### Rust’s naming convention for constants is to use all uppercase with underscores between words, and underscores can be inserted in numeric literals to improve readability
+
+Pull request checks
