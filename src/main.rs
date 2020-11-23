@@ -23,7 +23,7 @@ fn five() -> i32 {
 }
 
 fn conditional_example(number: i32) {
-    if numb er < 5 {
+    if number < 5 {
         println!("condition was true");
     } else {
         println!("condition was false");
