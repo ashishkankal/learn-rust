@@ -11,7 +11,7 @@ fn main() {
 fn tuple_example() {
     let tup: (i32, f64, u8) = (500, 6.4, 1);
     let (x, y, z) = tup;
-    println!("The value of y is: {}", y);
+    println!("The value of y is: {} {} {}", x, y, z);
 }
 
 fn another_function(x: i32) {
@@ -23,7 +23,7 @@ fn five() -> i32 {
 }
 
 fn conditional_example(number: i32) {
-    if number < 5 {
+    if numb er < 5 {
         println!("condition was true");
     } else {
         println!("condition was false");
